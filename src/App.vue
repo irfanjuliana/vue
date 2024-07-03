@@ -1,19 +1,15 @@
-<script>
-export default {
-  data() {
-    return {
-      count: 0,
-    };
-  },
-  methods: {
-    increase() {
-      this.count++;
-    },
-    decrease() {
-      this.count--;
-    },
-  },
-};
+<script setup>
+import { ref } from "vue";
+
+const count = ref(0);
+
+function increase() {
+  count.value++;
+}
+
+function decrease() {
+  count.value--;
+}
 </script>
 
 <template>
